@@ -1,5 +1,3 @@
-# main.tf
-
 # Provider configuration (e.g., AWS, Azure, etc.)
 provider "aws" {
   region = "us-west-2"
