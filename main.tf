@@ -21,5 +21,5 @@ resource "null_resource" "example" {
 # Variable definition
 variable "message" {
   type    = string
-  default = "Hello, Terraform!"
+  default = "Hello, Terraform! This is a message."
 }
