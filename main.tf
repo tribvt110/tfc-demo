@@ -1,23 +1,17 @@
-# Provider configuration (e.g., AWS, Azure, etc.)
+# Define the provider (e.g., AWS)
 provider "aws" {
   region = "us-west-2"
 }
 
-# Null resource definition
+# Create a null_resource
 resource "null_resource" "example" {
-  # Triggers the resource to be recreated if the value of `message` changes
+  # Define the triggers for the null_resource
   triggers = {
-    message = "${var.message}"
+    # Add any triggers here if needed
   }
 
-  # Provisioner block to execute commands
+  # Define the provisioner for the null_resource
   provisioner "local-exec" {
-    command = "echo ${var.message}"
+    command = "echo 'Hello, Terraform!'"
   }
-}
-
-# Variable definition
-variable "message" {
-  type    = string
-  default = "Hello, Ethan!"
 }
